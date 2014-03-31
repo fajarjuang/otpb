@@ -1,0 +1,10 @@
+prefix cs: <http://purl.org/vocab/changeset/schema#>
+
+SELECT DISTINCT (count(?a) as ?additions) (count(?r) as ?removals) (count(?c) as ?changes)
+WHERE {
+{ ?a a cs:ChangeSet. ?a cs:createdDate ?date. FILTER EXISTS { ?a cs:addition ?b. } FILTER NOT EXISTS { ?a cs:removal ?b. }. FILTER(?date = cs:commit_XXX). }
+UNION
+{ ?r a cs:ChangeSet. ?r cs:createdDate ?date. FILTER EXISTS { ?r cs:removal ?b. } FILTER NOT EXISTS { ?r cs:addition ?b. }.  FILTER(?date = cs:commit_XXX).}
+UNION
+{ ?c a cs:ChangeSet. ?c cs:createdDate ?date. FILTER EXISTS { ?c cs:addition ?b. ?c cs:removal ?d. }. FILTER(?date = cs:commit_XXX). }
+}

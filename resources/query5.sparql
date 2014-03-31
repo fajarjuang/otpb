@@ -1,0 +1,7 @@
+PREFIX eplan:<http://www.owl-ontologies.com/Ontology1370788248.owl#>
+PREFIX cs: <http://purl.org/vocab/changeset/schema#>
+
+SELECT ?s WHERE {
+    ?s eplan:signalNumber ?number.
+    FILTER(regex(str(?number), "XQ05", "i")).
+}

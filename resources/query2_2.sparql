@@ -1,0 +1,6 @@
+prefix cs: <http://purl.org/vocab/changeset/schema#>
+
+SELECT ?date (count(?r) as ?deletions)
+WHERE {
+?r a cs:ChangeSet. ?r cs:createdDate ?date. FILTER EXISTS { ?r cs:removal ?b. }.  FILTER NOT EXISTS { ?r cs:addition ?b. }.
+} GROUP BY ?date

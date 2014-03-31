@@ -1,0 +1,126 @@
+<TestSuite name="Transformation performance test">
+	<Driver name="Bigdata" driverClass="at.ac.tuwien.otpb.BenchmarkDriver"/>
+	<Parameter name="store" value="at.ac.tuwien.otpb.store.BigdataStore"/>
+	<Parameter name="eplan2vcdmQuery" value="resources/eplan/eplan2vcdm.sparql"/>
+	<Parameter name="vcdm2opmQuery" value="resources/opm/vcdm2opm.sparql"/>
+	<Parameter name="eplanOWL" value="resources/eplan/eplan_empty.owl"/>
+	<Parameter name="opmOWL" value="resources/opm/opm_empty.owl"/>
+	<Parameter name="vcdmOWL" value="resources/vcdm.owl"/>
+	<Parameter name="deleteStore" value="false"/>
+	<Parameter name="query1" value="resources/query1.sparql"/>
+	<Parameter name="query2_1" value="resources/query2_1.sparql"/>
+	<Parameter name="query2_2" value="resources/query2_2.sparql"/>
+	<Parameter name="query2_3" value="resources/query2_3.sparql"/>
+	<Parameter name="query3" value="resources/query3.sparql"/>
+	<Parameter name="query4" value="resources/query4.sparql"/>
+	<Parameter name="query5" value="resources/query5.sparql"/>
+	<Parameter name="query6" value="resources/query6.sparql"/>
+	<Parameter name="query7" value="resources/query7.sparql"/>
+	<Parameter name="query8" value="resources/query8.sparql"/>
+	<Parameter name="versioned" value="true"/>
+	<TestCase name="commit_0">
+		<Parameter name="insertsFile" value="resources/testdata/scenario_1/scenario_1_commit_0_inserts.turtle"/>
+		<Parameter name="updatesFile" value="resources/testdata/scenario_1/scenario_1_commit_0_updates.turtle"/>
+		<Parameter name="deletesFile" value="resources/testdata/scenario_1/scenario_1_commit_0_deletes.turtle"/>
+	</TestCase>
+	<TestCase name="commit_1">
+		<Parameter name="insertsFile" value="resources/testdata/scenario_1/scenario_1_commit_1_inserts.turtle"/>
+		<Parameter name="updatesFile" value="resources/testdata/scenario_1/scenario_1_commit_1_updates.turtle"/>
+		<Parameter name="deletesFile" value="resources/testdata/scenario_1/scenario_1_commit_1_deletes.turtle"/>
+	</TestCase>
+	<TestCase name="commit_2">
+		<Parameter name="insertsFile" value="resources/testdata/scenario_1/scenario_1_commit_2_inserts.turtle"/>
+		<Parameter name="updatesFile" value="resources/testdata/scenario_1/scenario_1_commit_2_updates.turtle"/>
+		<Parameter name="deletesFile" value="resources/testdata/scenario_1/scenario_1_commit_2_deletes.turtle"/>
+	</TestCase>
+	<TestCase name="commit_3">
+		<Parameter name="insertsFile" value="resources/testdata/scenario_1/scenario_1_commit_3_inserts.turtle"/>
+		<Parameter name="updatesFile" value="resources/testdata/scenario_1/scenario_1_commit_3_updates.turtle"/>
+		<Parameter name="deletesFile" value="resources/testdata/scenario_1/scenario_1_commit_3_deletes.turtle"/>
+	</TestCase>
+	<TestCase name="commit_4">
+		<Parameter name="insertsFile" value="resources/testdata/scenario_1/scenario_1_commit_4_inserts.turtle"/>
+		<Parameter name="updatesFile" value="resources/testdata/scenario_1/scenario_1_commit_4_updates.turtle"/>
+		<Parameter name="deletesFile" value="resources/testdata/scenario_1/scenario_1_commit_4_deletes.turtle"/>
+	</TestCase>
+	<TestCase name="commit_5">
+		<Parameter name="insertsFile" value="resources/testdata/scenario_1/scenario_1_commit_5_inserts.turtle"/>
+		<Parameter name="updatesFile" value="resources/testdata/scenario_1/scenario_1_commit_5_updates.turtle"/>
+		<Parameter name="deletesFile" value="resources/testdata/scenario_1/scenario_1_commit_5_deletes.turtle"/>
+	</TestCase>
+	<TestCase name="commit_6">
+		<Parameter name="insertsFile" value="resources/testdata/scenario_1/scenario_1_commit_6_inserts.turtle"/>
+		<Parameter name="updatesFile" value="resources/testdata/scenario_1/scenario_1_commit_6_updates.turtle"/>
+		<Parameter name="deletesFile" value="resources/testdata/scenario_1/scenario_1_commit_6_deletes.turtle"/>
+	</TestCase>
+	<TestCase name="commit_7">
+		<Parameter name="insertsFile" value="resources/testdata/scenario_1/scenario_1_commit_7_inserts.turtle"/>
+		<Parameter name="updatesFile" value="resources/testdata/scenario_1/scenario_1_commit_7_updates.turtle"/>
+		<Parameter name="deletesFile" value="resources/testdata/scenario_1/scenario_1_commit_7_deletes.turtle"/>
+	</TestCase>
+	<TestCase name="commit_8">
+		<Parameter name="insertsFile" value="resources/testdata/scenario_1/scenario_1_commit_8_inserts.turtle"/>
+		<Parameter name="updatesFile" value="resources/testdata/scenario_1/scenario_1_commit_8_updates.turtle"/>
+		<Parameter name="deletesFile" value="resources/testdata/scenario_1/scenario_1_commit_8_deletes.turtle"/>
+	</TestCase>
+	<TestCase name="commit_9">
+		<Parameter name="insertsFile" value="resources/testdata/scenario_1/scenario_1_commit_9_inserts.turtle"/>
+		<Parameter name="updatesFile" value="resources/testdata/scenario_1/scenario_1_commit_9_updates.turtle"/>
+		<Parameter name="deletesFile" value="resources/testdata/scenario_1/scenario_1_commit_9_deletes.turtle"/>
+	</TestCase>
+	<TestCase name="commit_10">
+		<Parameter name="insertsFile" value="resources/testdata/scenario_1/scenario_1_commit_10_inserts.turtle"/>
+		<Parameter name="updatesFile" value="resources/testdata/scenario_1/scenario_1_commit_10_updates.turtle"/>
+		<Parameter name="deletesFile" value="resources/testdata/scenario_1/scenario_1_commit_10_deletes.turtle"/>
+	</TestCase>
+	<TestCase name="commit_11">
+		<Parameter name="insertsFile" value="resources/testdata/scenario_1/scenario_1_commit_11_inserts.turtle"/>
+		<Parameter name="updatesFile" value="resources/testdata/scenario_1/scenario_1_commit_11_updates.turtle"/>
+		<Parameter name="deletesFile" value="resources/testdata/scenario_1/scenario_1_commit_11_deletes.turtle"/>
+	</TestCase>
+	<TestCase name="commit_12">
+		<Parameter name="insertsFile" value="resources/testdata/scenario_1/scenario_1_commit_12_inserts.turtle"/>
+		<Parameter name="updatesFile" value="resources/testdata/scenario_1/scenario_1_commit_12_updates.turtle"/>
+		<Parameter name="deletesFile" value="resources/testdata/scenario_1/scenario_1_commit_12_deletes.turtle"/>
+	</TestCase>
+	<TestCase name="commit_13">
+		<Parameter name="insertsFile" value="resources/testdata/scenario_1/scenario_1_commit_13_inserts.turtle"/>
+		<Parameter name="updatesFile" value="resources/testdata/scenario_1/scenario_1_commit_13_updates.turtle"/>
+		<Parameter name="deletesFile" value="resources/testdata/scenario_1/scenario_1_commit_13_deletes.turtle"/>
+	</TestCase>
+	<TestCase name="commit_14">
+		<Parameter name="insertsFile" value="resources/testdata/scenario_1/scenario_1_commit_14_inserts.turtle"/>
+		<Parameter name="updatesFile" value="resources/testdata/scenario_1/scenario_1_commit_14_updates.turtle"/>
+		<Parameter name="deletesFile" value="resources/testdata/scenario_1/scenario_1_commit_14_deletes.turtle"/>
+	</TestCase>
+	<TestCase name="commit_15">
+		<Parameter name="insertsFile" value="resources/testdata/scenario_1/scenario_1_commit_15_inserts.turtle"/>
+		<Parameter name="updatesFile" value="resources/testdata/scenario_1/scenario_1_commit_15_updates.turtle"/>
+		<Parameter name="deletesFile" value="resources/testdata/scenario_1/scenario_1_commit_15_deletes.turtle"/>
+	</TestCase>
+	<TestCase name="commit_16">
+		<Parameter name="insertsFile" value="resources/testdata/scenario_1/scenario_1_commit_16_inserts.turtle"/>
+		<Parameter name="updatesFile" value="resources/testdata/scenario_1/scenario_1_commit_16_updates.turtle"/>
+		<Parameter name="deletesFile" value="resources/testdata/scenario_1/scenario_1_commit_16_deletes.turtle"/>
+	</TestCase>
+	<TestCase name="commit_17">
+		<Parameter name="insertsFile" value="resources/testdata/scenario_1/scenario_1_commit_17_inserts.turtle"/>
+		<Parameter name="updatesFile" value="resources/testdata/scenario_1/scenario_1_commit_17_updates.turtle"/>
+		<Parameter name="deletesFile" value="resources/testdata/scenario_1/scenario_1_commit_17_deletes.turtle"/>
+	</TestCase>
+	<TestCase name="commit_18">
+		<Parameter name="insertsFile" value="resources/testdata/scenario_1/scenario_1_commit_18_inserts.turtle"/>
+		<Parameter name="updatesFile" value="resources/testdata/scenario_1/scenario_1_commit_18_updates.turtle"/>
+		<Parameter name="deletesFile" value="resources/testdata/scenario_1/scenario_1_commit_18_deletes.turtle"/>
+	</TestCase>
+	<TestCase name="commit_19">
+		<Parameter name="insertsFile" value="resources/testdata/scenario_1/scenario_1_commit_19_inserts.turtle"/>
+		<Parameter name="updatesFile" value="resources/testdata/scenario_1/scenario_1_commit_19_updates.turtle"/>
+		<Parameter name="deletesFile" value="resources/testdata/scenario_1/scenario_1_commit_19_deletes.turtle"/>
+	</TestCase>
+	<TestCase name="commit_20">
+		<Parameter name="insertsFile" value="resources/testdata/scenario_1/scenario_1_commit_20_inserts.turtle"/>
+		<Parameter name="updatesFile" value="resources/testdata/scenario_1/scenario_1_commit_20_updates.turtle"/>
+		<Parameter name="deletesFile" value="resources/testdata/scenario_1/scenario_1_commit_20_deletes.turtle"/>
+	</TestCase>
+</TestSuite>

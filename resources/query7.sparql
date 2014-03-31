@@ -1,0 +1,8 @@
+PREFIX eplan:<http://www.owl-ontologies.com/Ontology1370788248.owl#>
+PREFIX cs: <http://purl.org/vocab/changeset/schema#>
+
+SELECT (count(?cs) as ?countUpdates) WHERE {
+    ?s eplan:signalNumber ?number.
+    ?cs cs:subjectOfChange ?s.
+    FILTER regex(str(?number), "XQ05")
+}
