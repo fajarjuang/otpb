@@ -56,16 +56,16 @@
 			<artifactId>sesame-sail-nativerdf</artifactId>
 			<version>${sesame.version}</version>
 		</dependency>
-		<!--<dependency>-->
-			<!--<groupId>org.openrdf.sesame</groupId>-->
-			<!--<artifactId>sesame-repository-http</artifactId>-->
-			<!--<version>${sesame.version}</version>-->
-		<!--</dependency>-->
 		<dependency>
 			<groupId>org.openrdf.sesame</groupId>
-			<artifactId>sesame-repository-sparql</artifactId>
+			<artifactId>sesame-repository-http</artifactId>
 			<version>${sesame.version}</version>
 		</dependency>
+		<!--<dependency>-->
+			<!--<groupId>org.openrdf.sesame</groupId>-->
+			<!--<artifactId>sesame-repository-sparql</artifactId>-->
+			<!--<version>${sesame.version}</version>-->
+		<!--</dependency>-->
 		<dependency>
 			<groupId>org.openrdf.sesame</groupId>
 			<artifactId>sesame-rio-turtle</artifactId>

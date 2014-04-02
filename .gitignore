@@ -52,7 +52,8 @@ $RECYCLE.BIN/
 ##########
 # project specific
 # exclude output folders with names like "yyyy-mm-dd hh-mm/"
-[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9] [0-9][0-9]-[0-9][0-9]/
+/[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9] [0-9][0-9]-[0-9][0-9]/
 
 # exclude generated scenario files
-resources/testdata/scenario_*/
+/resources/testdata/scenario_*/
+/store/
