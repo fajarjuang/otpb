@@ -1,44 +1,38 @@
 package at.ac.tuwien.otpb.runnables;
+import at.ac.tuwien.Changeset;
+import at.ac.tuwien.ChangesetCreator;
+import at.ac.tuwien.UpdateType;
+import com.hp.hpl.jena.query.QueryExecution;
+import com.hp.hpl.jena.rdf.model.Model;
+import com.hp.hpl.jena.rdf.model.Statement;
+import com.hp.hpl.jena.rdf.model.StmtIterator;
 
-import org.openrdf.model.Statement;
-import org.openrdf.query.GraphQuery;
-import org.openrdf.query.GraphQueryResult;
-import org.openrdf.query.QueryEvaluationException;
-import org.openrdf.repository.RepositoryConnection;
-import org.openrdf.repository.RepositoryException;
+import java.util.List;
 
-public class TransformationRunnable implements Runnable {
-	private final RepositoryConnection source;
-	private final RepositoryConnection target;
-	private final GraphQuery query;
+public class TransformationRunnable implements Runnable
+{
+    private Model source;
+    private Model target;
+    private QueryExecution query;
 
-	public TransformationRunnable(GraphQuery query, RepositoryConnection source, RepositoryConnection target) {
-		this.query = query;
-		this.source = source;
-		this.target = target;
-	}
+    public TransformationRunnable(QueryExecution query, Model source, Model target) {
+        this.query = query;
+        this.source = source;
+        this.target = target;
+    }
 
-	@Override
-	public void run() {
-		try {
-			target.begin();
-			GraphQueryResult result = query.evaluate();
-			while (result.hasNext()) {
-				Statement statement = result.next();
-				target.add(statement);
-			}
-			target.commit();
-		} catch (QueryEvaluationException e) {
-			e.printStackTrace();
-		} catch (RepositoryException e) {
-			e.printStackTrace();
-		} finally {
-			try {
-				source.close();
-				target.close();
-			} catch (RepositoryException e) {
-				e.printStackTrace();
-			}
-		}
-	}
+    @Override
+    public void run() {
+        try {
+            Model model = query.execConstruct();
+            StmtIterator result = model.listStatements();
+            while (result.hasNext()) {
+                Statement statement = result.next();
+                target.add(statement);
+            }
+            target.commit();
+        } finally {
+            query.close();
+        }
+    }
 }

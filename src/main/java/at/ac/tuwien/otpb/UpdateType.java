@@ -1,7 +1,7 @@
-package at.ac.tuwien.otpb;
+package at.ac.tuwien;
 
 public enum UpdateType {
-	INSERT,
-	UPDATE,
-	DELETION
+    INSERT,
+    UPDATE,
+    DELETION
 }
