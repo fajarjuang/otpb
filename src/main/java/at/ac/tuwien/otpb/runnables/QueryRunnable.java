@@ -2,7 +2,6 @@ package at.ac.tuwien.otpb.runnables;
 
 import com.hp.hpl.jena.query.QueryExecution;
 import com.hp.hpl.jena.query.ResultSet;
-import com.hp.hpl.jena.sparql.engine.QueryExecutionBase;
 
 public class QueryRunnable implements Runnable
 {

@@ -12,8 +12,6 @@
     <properties>
         <java.version>1.7</java.version>
         <genben.version>1.0-SNAPSHOT</genben.version>
-        <bigdata.version>1.3.0</bigdata.version>
-        <sesame.version>2.7.10</sesame.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
@@ -57,7 +55,7 @@
                     <archive>
                         <manifest>
                             <addClasspath>true</addClasspath>
-                            <mainClass>at.ac.tuwien.genben.TestRunner</mainClass>
+                            <mainClass>at.ac.tuwien.otpb.TestMain</mainClass>
                             <classpathPrefix>lib/</classpathPrefix>
                         </manifest>
                     </archive>
@@ -79,6 +77,17 @@
                         </configuration>
                     </execution>
                 </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>1.2.1</version>
+                <configuration>
+                    <mainClass>at.ac.tuwien.otpb.TestMain</mainClass>
+                    <arguments>
+                        <argument>jena_config_scenario1.xml</argument>
+                    </arguments>
+                </configuration>
             </plugin>
         </plugins>
     </build>

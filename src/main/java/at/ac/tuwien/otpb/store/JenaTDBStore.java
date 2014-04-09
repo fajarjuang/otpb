@@ -39,7 +39,7 @@ public class JenaTDBStore implements Store {
        Model model = dataset.getDefaultModel();
         try {
             FileInputStream input = new FileInputStream(new File(filename));
-            model.read(input, "");
+            model.read(input, null, "RDF/XML");
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }

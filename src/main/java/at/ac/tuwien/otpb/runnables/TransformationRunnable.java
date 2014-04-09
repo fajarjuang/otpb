@@ -1,7 +1,5 @@
 package at.ac.tuwien.otpb.runnables;
-import at.ac.tuwien.Changeset;
-import at.ac.tuwien.ChangesetCreator;
-import at.ac.tuwien.UpdateType;
+
 import com.hp.hpl.jena.query.QueryExecution;
 import com.hp.hpl.jena.rdf.model.Model;
 import com.hp.hpl.jena.rdf.model.Statement;
@@ -30,7 +28,6 @@ public class TransformationRunnable implements Runnable
                 Statement statement = result.next();
                 target.add(statement);
             }
-            target.commit();
         } finally {
             query.close();
         }

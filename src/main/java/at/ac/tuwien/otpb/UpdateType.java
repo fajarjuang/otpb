@@ -1,4 +1,4 @@
-package at.ac.tuwien;
+package at.ac.tuwien.otpb;
 
 public enum UpdateType {
     INSERT,

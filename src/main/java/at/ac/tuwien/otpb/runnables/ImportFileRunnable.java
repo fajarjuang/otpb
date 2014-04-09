@@ -20,7 +20,7 @@ public class ImportFileRunnable implements Runnable
     public void run() {
         try {
             FileInputStream inputStream = new FileInputStream(file);
-            model.read(inputStream, "");
+            model.read(inputStream, null, "TTL");
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }

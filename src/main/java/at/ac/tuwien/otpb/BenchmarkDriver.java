@@ -90,7 +90,7 @@ public class BenchmarkDriver implements TestDriver {
 
     @Override
     public void prepare(TestCase testCase) {
-        String storeClassName = testCase.getParameter("store").getName();
+        String storeClassName = testCase.getParameter("store").getValue();
         try {
             store = (Store) Class.forName(storeClassName).newInstance();
         } catch (ClassNotFoundException | InstantiationException | IllegalAccessException e) {

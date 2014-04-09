@@ -1,8 +1,8 @@
 package at.ac.tuwien.otpb.runnables;
 
-import at.ac.tuwien.Changeset;
-import at.ac.tuwien.ChangesetCreator;
-import at.ac.tuwien.UpdateType;
+import at.ac.tuwien.otpb.Changeset;
+import at.ac.tuwien.otpb.ChangesetCreator;
+import at.ac.tuwien.otpb.UpdateType;
 import com.hp.hpl.jena.rdf.model.Model;
 import com.hp.hpl.jena.rdf.model.Statement;
 import com.hp.hpl.jena.rdf.model.StmtIterator;

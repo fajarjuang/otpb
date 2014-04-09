@@ -1,4 +1,4 @@
-package at.ac.tuwien;
+package at.ac.tuwien.otpb;
 
 import com.hp.hpl.jena.rdf.model.Model;
 import com.hp.hpl.jena.rdf.model.Statement;
