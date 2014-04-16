@@ -31,9 +31,7 @@ public class DeleteFromStoreRunnable implements Runnable {
 				if (withChangeset) {
 					ChangesetCreator changesetCreator = new ChangesetCreator(target.getValueFactory(), statement, UpdateType.DELETION);
 					Changeset changeset = changesetCreator.createChangeset();
-					for (Statement changesetStatement : changeset.createStatements()) {
-						target.add(changesetStatement);
-					}
+					target.add(changeset.createStatements());
 				}
 			}
 

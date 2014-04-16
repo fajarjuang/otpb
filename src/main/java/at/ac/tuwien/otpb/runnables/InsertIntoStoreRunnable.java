@@ -39,16 +39,12 @@ public class InsertIntoStoreRunnable implements Runnable {
 					if (oldStatements.size() >= 1) {
 						ChangesetCreator changesetCreator = new ChangesetCreator(target.getValueFactory(), oldStatements.get(0), statement);
 						Changeset changeset = changesetCreator.createChangeset();
-						for (Statement changesetStatement : changeset.createStatements()) {
-							target.add(changesetStatement);
-						}
+						target.add(changeset.createStatements());
 					} else {
 						ChangesetCreator changesetCreator = new ChangesetCreator(target.getValueFactory(), statement,
 								UpdateType.INSERT);
 						Changeset changeset = changesetCreator.createChangeset();
-						for (Statement changesetStatement : changeset.createStatements()) {
-							target.add(changesetStatement);
-						}
+						target.add(changeset.createStatements());
 					}
 				}
 				if (oldStatements.size() >= 1) {

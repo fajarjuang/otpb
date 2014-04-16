@@ -10,6 +10,7 @@ import org.openrdf.model.vocabulary.RDF;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 
 public class Changeset {
@@ -53,10 +54,10 @@ public class Changeset {
 		List<Statement> statements = new ArrayList<>();
 		statements.add(valueFactory.createStatement(changesetURI, RDF.TYPE, valueFactory.createURI(changesetTypeURI)));
 		statements.add(valueFactory.createStatement(changesetURI, valueFactory.createURI(createdDateURI),
-				valueFactory.createURI(ns + "commit_ " + timestamp)));
+				valueFactory.createURI(ns + "commit_" + timestamp)));
 
 		if (addition != null) {
-			BNode additionBnode = valueFactory.createBNode("addition");
+			BNode additionBnode = valueFactory.createBNode("addition" + UUID.randomUUID());
 			statements.add(valueFactory.createStatement(changesetURI, valueFactory.createURI(subjectOfChangeURI), addition.getSubject()));
 			statements.add(valueFactory.createStatement(changesetURI, valueFactory.createURI(additionURI), additionBnode));
 			statements.add(valueFactory.createStatement(additionBnode, RDF.SUBJECT, addition.getSubject()));
@@ -64,7 +65,7 @@ public class Changeset {
 			statements.add(valueFactory.createStatement(additionBnode, RDF.OBJECT, addition.getObject()));
 		}
 		if (removal != null) {
-			BNode removalBnode = valueFactory.createBNode("removal");
+			BNode removalBnode = valueFactory.createBNode("removal" + UUID.randomUUID());
 			statements.add(valueFactory.createStatement(changesetURI, valueFactory.createURI(subjectOfChangeURI), removal.getSubject()));
 			statements.add(valueFactory.createStatement(changesetURI, valueFactory.createURI(removalURI), removalBnode));
 			statements.add(valueFactory.createStatement(removalBnode, RDF.SUBJECT, removal.getSubject()));
