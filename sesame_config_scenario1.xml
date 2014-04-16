@@ -1,8 +1,12 @@
 <TestSuite name="Transformation performance test">
 	<Driver name="sesame" driverClass="at.ac.tuwien.otpb.BenchmarkDriver"/>
-	<Parameter name="store" value="at.ac.tuwien.otpb.store.RemoteSesameStore"/>
+	<Parameter name="store" value="at.ac.tuwien.otpb.store.SPARQLEndpointStore"/>
 	<Parameter name="url" value="http://localhost:8080/openrdf-sesame/"/>
 	<Parameter name="repository" value="benchmark"/>
+	<Parameter name="sparqlqueryurl" value="http://localhost:5820/benchmark/query"/>
+	<Parameter name="sparqlupdateurl" value="http://localhost:5820/benchmark/update"/>
+	<Parameter name="sparqluser" value="admin"/>
+	<Parameter name="sparqlpass" value="admin"/>
 	<Parameter name="eplan2vcdmQuery" value="resources/eplan/eplan2vcdm.sparql"/>
 	<Parameter name="vcdm2opmQuery" value="resources/opm/vcdm2opm.sparql"/>
 	<Parameter name="eplanOWL" value="resources/eplan/eplan_empty.owl"/>
