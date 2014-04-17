@@ -16,7 +16,7 @@ public class JenaTDBStore implements Store {
     Dataset dataset;
     @Override
     public void initStore(TestCase testCase) {
-        dataset = TDBFactory.createDataset();
+        dataset = TDBFactory.createDataset("tdb");
     }
 
     @Override
@@ -31,7 +31,9 @@ public class JenaTDBStore implements Store {
 
     @Override
     public String[] getFileOrDirectoryList() {
-        return new String[0];
+        String tdbDirectory[] = new String[1];
+        tdbDirectory[0] = "tdb/";
+        return tdbDirectory;
     }
 
     @Override
