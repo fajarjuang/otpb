@@ -18,7 +18,7 @@ public class SPARQLEndpointStore implements Store {
 	public void initStore(TestCase testCase) {
 		SPARQLRepository repository = new SPARQLRepository(testCase.getParameter("sparqlqueryurl").getValue(), testCase.getParameter("sparqlupdateurl").getValue());
 		if (testCase.getParameter("sparqluser") != null && testCase.getParameter("sparqlpass") != null)
-		repository.setUsernameAndPassword(testCase.getParameter("sparqluser").getValue(), testCase.getParameter("sparqlpass").getValue());
+			repository.setUsernameAndPassword(testCase.getParameter("sparqluser").getValue(), testCase.getParameter("sparqlpass").getValue());
 		this.repository = repository;
 		try {
 			repository.initialize();
