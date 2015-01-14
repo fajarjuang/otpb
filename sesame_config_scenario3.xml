@@ -1,0 +1,28 @@
+<TestSuite name="Transformation performance test">
+	<Driver name="sesame" driverClass="at.ac.tuwien.otpb.BenchmarkDriver"/>
+	<Parameter name="store" value="at.ac.tuwien.otpb.store.RemoteSesameStore"/>
+	<Parameter name="url" value="http://localhost:8080/openrdf-sesame/"/>
+	<Parameter name="repository" value="benchmark"/>
+	<Parameter name="eplan2vcdmQuery" value="resources/eplan/eplan2vcdm.sparql"/>
+	<Parameter name="vcdm2opmQuery" value="resources/opm/vcdm2opm.sparql"/>
+	<Parameter name="eplanOWL" value="resources/eplan/eplan_empty.owl"/>
+	<Parameter name="opmOWL" value="resources/opm/opm_empty.owl"/>
+	<Parameter name="vcdmOWL" value="resources/vcdm.owl"/>
+	<Parameter name="deleteStore" value="false"/>
+	<Parameter name="query1" value="resources/query1.sparql"/>
+	<Parameter name="query2_1" value="resources/query2_1.sparql"/>
+	<Parameter name="query2_2" value="resources/query2_2.sparql"/>
+	<Parameter name="query2_3" value="resources/query2_3.sparql"/>
+	<Parameter name="query3" value="resources/query3.sparql"/>
+	<Parameter name="query4" value="resources/query4.sparql"/>
+	<Parameter name="query5" value="resources/query5.sparql"/>
+	<Parameter name="query6" value="resources/query6.sparql"/>
+	<Parameter name="query7" value="resources/query7.sparql"/>
+	<Parameter name="query8" value="resources/query8.sparql"/>
+	<Parameter name="versioned" value="true"/>
+	<TestCase name="commit_0">
+		<Parameter name="insertsFile" value="resources/testdata/scenario_1/scenario_1_commit_0_inserts.turtle"/>
+		<Parameter name="updatesFile" value="resources/testdata/scenario_1/scenario_1_commit_0_updates.turtle"/>
+		<Parameter name="deletesFile" value="resources/testdata/scenario_1/scenario_1_commit_0_deletes.turtle"/>
+	</TestCase>
+</TestSuite>
